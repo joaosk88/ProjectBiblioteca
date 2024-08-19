@@ -1,24 +1,22 @@
-﻿internal class Program
-{
+﻿using System;
+using ProjectBiblioteca.Models;  // Certifique-se de que o namespace está correto
 
-
-namespace ProjectBiblioteca
+namespace Livro
 {
-    internal class Book
+    internal class Program
     {
         private static void Main(string[] args)
         {
-            Book book = new Book
+            Livro livro = new Livro
             {
                 Titulo = "O Senhor dos Anéis",
-                Genero = "Ficção",
-                Editor = "Imfe",
-                Autor = "Tolkien"
+                Autor = "Tolkien",
+                Editora = "Imfe",
+                Genero = "Ficção"
             };
 
-            Console.WriteLine(projectBiblioteca);
+            Console.WriteLine(livro);
         }
     }
 }
 
-        
