@@ -1,7 +1,7 @@
 ﻿using System;
 using ProjectBiblioteca.Models;  // Certifique-se de que o namespace está correto
 
-namespace Livro
+namespace ProjectBiblioteca
 {
     internal class Program
     {
