@@ -1,15 +1,14 @@
 ﻿internal class Program
 {
-    using System;
-using MyLibraryProject.Models;
 
-namespace MyLibraryProject
+
+namespace ProjectBiblioteca
 {
-    internal class Program
+    internal class Book
     {
         private static void Main(string[] args)
         {
-            ProjectBiblioteca projectBiblioteca = new ProjectBiblioteca
+            Book book = new Book
             {
                 Titulo = "O Senhor dos Anéis",
                 Genero = "Ficção",
@@ -23,4 +22,3 @@ namespace MyLibraryProject
 }
 
         
-}
