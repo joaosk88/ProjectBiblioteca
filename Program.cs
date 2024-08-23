@@ -1,5 +1,6 @@
 ﻿using System;
-using ProjectBiblioteca.Models;  
+using ProjectBiblioteca.Models;
+using ProjectBiblioteca.Src.Models.Usuario.ProjectBiblioteca.Models;
 
 namespace ProjectBiblioteca
 {
@@ -10,12 +11,25 @@ namespace ProjectBiblioteca
             Livro livro = new Livro
             {
                 Titulo = "O Senhor dos Anéis",
-                Autor = "Tolkien",
-                Editora = "Imfe",
-                Genero = "Ficção"
+                Autor = "J. R. R. Tolkien",
+                Editora = "HarperCollins",
+                Genero = "Fantasia",
             };
 
-            Console.WriteLine(livro);
+            Livro livro01 = new Livro01
+            {
+                Titulo = "Manifesto do partido comunista",
+                Autor = "Karl Marx",
+                Editora = "Camelot",
+                Genero = "Politico",
+            };
+
+
+
+            // Criando uma instância de Usuario
+            Usuario usuario = new Usuario("Maria da Silva");
+            usuario.AdicionarLivroEmprestado(livro);
+            Console.WriteLine(usuario);
         }
     }
 }
