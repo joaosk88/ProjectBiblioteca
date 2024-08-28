@@ -6,8 +6,11 @@ namespace ProjectBiblioteca
 {
     internal class Program
     {
+        public static object LivrosEmprestados { get; private set; }
+
         private static void Main(string[] args)
         {
+            // Criando instâncias de livros
             Livro livro1 = new Livro
             {
                 Titulo = "O Senhor dos Anéis",
@@ -32,21 +35,27 @@ namespace ProjectBiblioteca
                 Genero = "Autoajuda"
             };
 
-            List<Livro> livros = new List<Livro> { livro1, livro2, livro3 };
-
+            // Criando instância de usuário
             Usuario usuario = new Usuario
             {
                 Nome = "Claudinei"
             };
 
-            foreach (var livro in livros)
-            {
-                Console.WriteLine(livro);
-            }
+            // Adicionando livros à lista de livros emprestados do usuário
+            usuario.LivrosEmprestados.Add(livro1);
+            usuario.LivrosEmprestados.Add(livro2);
+            usuario.LivrosEmprestados.Add(livro3);
 
             // Exibindo informações sobre o empréstimo
-            Console.WriteLine($"Empréstimo solicitado por: {usuario.Nome}");
-            Console.WriteLine($"Livro emprestado: {livro1}");
+            Console.WriteLine($"Usuario: {usuario.Nome}");
+            Console.WriteLine($"Hora do empréstimo: {usuario.HoraDoEmprestimo}");
+            Console.WriteLine($"Livros emprestados:{LivrosEmprestados}");
+
+            // Exibindo a lista de livros emprestados
+            foreach (var livro in usuario.LivrosEmprestados)
+            {
+                Console.WriteLine($"- {livro.Titulo} por {livro.Autor}");
+            }
         }
     }
 }
